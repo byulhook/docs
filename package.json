@@ -1,17 +1,51 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "byul": "^1.2.9",
-    "byulhook": "^0.1.7"
-  },
-  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+	"name": "docs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "docusaurus start",
+		"build": "docusaurus build",
+		"serve": "docusaurus serve",
+		"swizzle": "docusaurus swizzle",
+		"clear": "docusaurus clear",
+		"write-translations": "docusaurus write-translations",
+		"write-heading-ids": "docusaurus write-heading-ids",
+		"typecheck": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@docusaurus/core": "^3.1.1",
+		"@docusaurus/preset-classic": "^3.1.1",
+		"@mdx-js/react": "^3.0.0",
+		"byulhook": "^0.1.7",
+		"clsx": "^2.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@docusaurus/module-type-aliases": "^3.1.1",
+		"@docusaurus/types": "^3.1.1",
+		"@types/react": "^18.2.48",
+		"byul": "^1.3.0",
+		"typescript": "^5.3.3"
+	},
+	"packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
+	"browserslist": {
+		"production": [
+			">0.5%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 3 chrome version",
+			"last 3 firefox version",
+			"last 5 safari version"
+		]
+	},
+	"engines": {
+		"node": ">=18.0"
+	}
 }
