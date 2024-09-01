@@ -1,6 +1,6 @@
 name: feat
 description: Do you have a new feature or specification?
-title: "[feature] "
+title: "[feat] "
 labels: ["feat"]
 body:
   - type: textarea
