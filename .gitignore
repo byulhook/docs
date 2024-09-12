@@ -2,3 +2,6 @@ node_modules/
 .nextra/
 .pnpm-lock.yaml
 .next/
+
+# macOS
+.DS_Store

@@ -1,0 +1,63 @@
+import { useState } from 'react';
+import { css } from '@emotion/react';
+import { Callout } from 'nextra/components';
+
+export default function Preview() {
+/** @jsxImportSource @emotion/react */
+
+const inputStyle = css`display:block;
+padding: 0.5rem;
+background-color: rgba(249, 250, 251, .1);
+border-radius: .5rem;
+font-size: 1em;
+width: 100%;
+box-sizing: border-box;
+margin-top:1.5rem;
+&:focus{
+  background-color: rgba(17, 17, 17, 1);
+}`;
+
+const codeBoxHeader = css`padding: 0.5rem 0 0.5rem 1rem;
+background-color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 77% / .1);
+border-radius: .5rem .5rem 0 0;
+font-size: 12px;
+box-sizing: border-box;
+margin: -1rem -1rem 1rem -1rem;`;
+
+const [custom, setCustom] = useState(
+'{type}: {commitMessage} (#{issueNumber})'
+);
+const handleChange = (e) => {
+setCustom(e.target.value)
+};
+return (
+
+<>
+  <pre>
+    <div css={codeBoxHeader}>Your Custom Summary</div>
+    <code>
+      {`// byul.config.json
+{
+  "byulFormat": "${custom}"
+}
+
+// Your branch
+feature/123-login
+
+// Your commit message
+git commit -m "Add login logic"
+`}
+
+</code>
+</pre>
+
+<pre style={{ backgroundColor: 'hsl(102.21deg 100% 77% / 22%)' }}>
+  <div css={codeBoxHeader}>Formatted Commit Message Preview</div>
+  <code>feature: Add login logic (#123)</code>
+</pre>
+
+</>
+
+);
+
+}
