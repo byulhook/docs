@@ -3,7 +3,7 @@ sidebar: false
 toc: false
 ---
 
-import { Tabs } from "nextra/components"
+import { ChangeTabs } from "../components/Tabs"
 import TextBox from "../components/TextBox.mdx"
 
 <h1 style={{ textAlign: "center", fontSize: "2.8rem", fontWeight: "700" }}>BYULHOOK</h1>
@@ -12,8 +12,8 @@ import TextBox from "../components/TextBox.mdx"
 <div style={{width: '100%',display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
 <div style={{width: '70%',display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
 <div style={{ width: '100%' }}>
-<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
-  <Tabs.Tab label="npm">
+<ChangeTabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <ChangeTabs.Tab label="npm">
 
       <code style={{display:'block',width: '100%'}}>
       ```js copy
@@ -21,8 +21,8 @@ import TextBox from "../components/TextBox.mdx"
       ```
       </code>
 
-  </Tabs.Tab>
-  <Tabs.Tab label="pnpm">
+  </ChangeTabs.Tab>
+  <ChangeTabs.Tab label="pnpm">
 
       <code>
       ```js copy
@@ -30,8 +30,8 @@ import TextBox from "../components/TextBox.mdx"
       ```
       </code>
 
-  </Tabs.Tab>
-  <Tabs.Tab label="yarn">
+  </ChangeTabs.Tab>
+  <ChangeTabs.Tab label="yarn">
 
       <code>
       ```js copy
@@ -39,8 +39,8 @@ import TextBox from "../components/TextBox.mdx"
       ```
       </code>
 
-  </Tabs.Tab>
-  <Tabs.Tab label="bun">
+  </ChangeTabs.Tab>
+  <ChangeTabs.Tab label="bun">
 
       <code>
       ```js copy
@@ -48,8 +48,8 @@ import TextBox from "../components/TextBox.mdx"
       ```
       </code>
 
-  </Tabs.Tab>
-</Tabs>
+  </ChangeTabs.Tab>
+</ChangeTabs>
 </div>
 </div>
 </div>
