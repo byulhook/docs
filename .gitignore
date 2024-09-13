@@ -2,6 +2,7 @@ node_modules/
 .nextra/
 .pnpm-lock.yaml
 .next/
+!node_modules/nextra/dist/components/tabs.js
 
 # macOS
 .DS_Store
