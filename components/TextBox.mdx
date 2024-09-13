@@ -1,0 +1,11 @@
+export default function TextBox ({title, content}) {
+  return (
+
+    <div>
+      <p style={{fontSize: '1.4rem', fontWeight: "700"}}>{title}</p>
+      <p style={{marginTop:'0.3rem'}} dangerouslySetInnerHTML={{ __html: content }} />
+    </div>
+
+)
+
+}
