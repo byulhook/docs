@@ -1,0 +1,35 @@
+import { useState } from 'react';
+import { css } from '@emotion/react';
+
+export default function CommitcodeBox() {
+/** @jsxImportSource @emotion/react */
+
+const inputStyle = css`display:block;
+padding: 0.5rem;
+background-color: rgba(249, 250, 251, .1);
+border-radius: .5rem;
+font-size: 1em;
+width: 100%;
+box-sizing: border-box;
+margin-top:1.5rem;
+&:focus{
+  background-color: rgba(17, 17, 17, 1);
+}`;
+
+const [message, setMessage] = useState('Add login logic');
+const handleChange = (e) => {
+setMessage(e.target.value)
+};
+return (
+
+<>
+  <pre>
+    <code>{`git commit -m "${message}"`}</code>
+  </pre>
+  <p>Write Your Commit Message Here:</p>
+  <input type="text" value={message} onChange={handleChange} css={inputStyle} />
+</>
+
+);
+
+}
