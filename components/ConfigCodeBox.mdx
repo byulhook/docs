@@ -1,0 +1,56 @@
+import { useState } from 'react';
+import { css } from '@emotion/react';
+import { Callout } from 'nextra/components';
+
+export default function ConfigCodeBox() {
+/** @jsxImportSource @emotion/react */
+
+const inputStyle = css`display:block;
+padding: 0.5rem;
+background-color: rgba(249, 250, 251, .1);
+border-radius: .5rem;
+font-size: 1em;
+width: 100%;
+box-sizing: border-box;
+margin-top:1.5rem;
+&:focus{
+  background-color: rgba(17, 17, 17, 1);
+}`;
+
+const codeBoxHeader = css`padding: 0.5rem 0 0.5rem 1rem;
+background-color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 77% / .1);
+border-radius: .5rem .5rem 0 0;
+font-size: 12px;
+box-sizing: border-box;
+margin: -1rem -1rem 1rem -1rem;`;
+
+const [custom, setCustom] = useState(
+'{type}: {commitMessage} (#{issueNumber})'
+);
+const handleChange = (e) => {
+setCustom(e.target.value)
+};
+return (
+
+<>
+  <pre>
+    <div css={codeBoxHeader}>byul.config.json</div>
+    <code>
+      {`{
+  "byulFormat": "${custom}"
+}`}
+    </code>
+  </pre>
+
+<p>Test your commit message format here:</p>
+<input type="text" value={custom} onChange={handleChange} css={inputStyle} />
+
+  <Callout type="info">
+    <strong>Custom Example</strong><br/>
+    {`#{issueNumber} {commitMessage} ({type})`}
+  </Callout>
+</>
+
+);
+
+}

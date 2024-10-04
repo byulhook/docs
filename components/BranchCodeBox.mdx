@@ -1,0 +1,47 @@
+import { useState } from 'react';
+import { css } from '@emotion/react';
+
+export default function BranchCodeBox() {
+/** @jsxImportSource @emotion/react */
+
+const inputStyle = css`margin-right:10px;`
+const inputWrapper = css `margin-top:1.5rem;`
+
+const branchList = ['feature/123-login', 'feature/login-123', 'feature/login123']
+
+const [index, setIndex] = useState(0);
+
+const handleChange = (e) => {
+setIndex(Number(e.target.value));
+};
+
+return (
+
+<>
+  <p>Select a branch example to test the commit message format</p>
+  <div css={inputWrapper}>
+  {branchList.map((branch, i) => (
+    <div key={i}>
+      <input 
+        type="radio" 
+        value={i} 
+        id={`b${i}`} 
+        name="branch" 
+        checked={i === index}
+        onChange={handleChange}
+        css={inputStyle}
+      />
+      <label htmlFor={`b${i}`}>{branch}</label>
+    </div>
+  ))}
+  </div>
+
+<pre>
+  <code>{branchList[index]}</code>
+</pre>
+
+</>
+
+);
+
+}

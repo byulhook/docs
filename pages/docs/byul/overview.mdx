@@ -1,0 +1,52 @@
+import ConfigCodeBox from '../../../components/ConfigCodeBox.mdx';
+import BranchCodeBox from '../../../components/BranchCodeBox.mdx';
+import CommitCodeBox from '../../../components/CommitCodeBox.mdx';
+import Preview from '../../../components/Preview.mdx';
+import { Callout } from 'nextra/components';
+
+# Customization
+
+## Commit message format
+
+You can customize the commit message format by modifying the
+`byul.config.json` file.
+
+<ConfigCodeBox />
+
+## Create Your Branch
+
+To maximize the effectiveness of Byul, follow these branch naming conventions:
+
+<br />
+<ul>
+  <li style={{ fontWeight: 'bold' }}>1. Branch Naming Format:</li>
+  <li style={{ paddingLeft: '15px' }}>• Use the format: type/issue</li>
+  <li style={{ fontWeight: 'bold' }}>2. Purpose:</li>
+  <li style={{ paddingLeft: '15px' }}>
+    • This format helps Byul to properly format commit messages by extracting
+    the branch type and issue number (if present).
+  </li>
+</ul>
+
+<BranchCodeBox />
+
+<Callout emoji="⚠️">
+  **Unsupported Branch Naming Conventions**
+  <ul>
+    <li>
+      Branch names that do not follow the recommended format may not work
+      correctly with byul.
+    </li>
+    <li>Examples of unsupported naming conventions include:</li>
+    <li>• release/release-1.0.2</li>
+    <li>• develop/develop3-132</li>
+  </ul>
+</Callout>
+
+## Write Commit Message
+
+<CommitCodeBox />
+
+## Preview Your Results
+
+<Preview />

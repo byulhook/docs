@@ -1,0 +1,78 @@
+---
+sidebar: false
+toc: false
+---
+
+import { ChangeTabs } from "../components/Tabs"
+import TextBox from "../components/TextBox.mdx"
+
+<h1 style={{ textAlign: "center", fontSize: "2.8rem", fontWeight: "700" }}>BYULHOOK</h1>
+
+<h2 style={{ textAlign: "center", margin: "40px 0" }}>Easy-to-Customize Git Hooks Manager</h2>
+<div style={{width: '100%',display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+<div style={{width: '70%',display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+<div style={{ width: '100%' }}>
+<ChangeTabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <ChangeTabs.Tab label="npm">
+
+      <code style={{display:'block',width: '100%'}}>
+      ```js copy
+      npm install byulhook
+      ```
+      </code>
+
+  </ChangeTabs.Tab>
+  <ChangeTabs.Tab label="pnpm">
+
+      <code>
+      ```js copy
+      pnpm add byulhook
+      ```
+      </code>
+
+  </ChangeTabs.Tab>
+  <ChangeTabs.Tab label="yarn">
+
+      <code>
+      ```js copy
+      yarn add byulhook
+      ```
+      </code>
+
+  </ChangeTabs.Tab>
+  <ChangeTabs.Tab label="bun">
+
+      <code>
+      ```js copy
+      bun add byulhook
+      ```
+      </code>
+
+  </ChangeTabs.Tab>
+</ChangeTabs>
+</div>
+</div>
+</div>
+<div style={{marginTop:'3rem',width: '100%',display:'flex', justifyContent:'center', alignItems:'center'}}>
+<a href="/docs/introduction">
+  <button style={{
+    padding: '5px 35px',
+    fontSize: '16px',
+    backgroundColor: '#222',
+    color: 'white',
+    border: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+}}>
+Get Started
+
+  </button>
+</a>
+</div>
+
+<div style={{marginTop:'6rem',width: '100%',display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+<TextBox title='Super Fast' content='Customizable for Easy<br/>Creation of Various Features<br/>Manage Git Hooks Easily'/>
+<TextBox title='Super Fast' content='Customizable for Easy<br/>Creation of Various Features<br/>Manage Git Hooks Easily'/>
+<TextBox title='Super Fast' content='Customizable for Easy<br/>Creation of Various Features<br/>Manage Git Hooks Easily'/>
+
+</div>
